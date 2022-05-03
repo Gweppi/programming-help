@@ -1,0 +1,3 @@
+struct Pizza: ObservableObject, Identifiable {
+
+}
