@@ -2,7 +2,7 @@
 //  Insterstitial.swift
 //
 //
-//  Created by Jesper Dinger on 23/08/2021.
+//  Created by Gweppi on 23/08/2021.
 //
 
 import GoogleMobileAds
