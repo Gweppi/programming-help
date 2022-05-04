@@ -18,6 +18,17 @@ class InterstitialAd: NSObject, GADFullScreenContentDelegate, ObservableObject {
             interstitial = ad
         })
     }
+
+    static func modifiedLoadAd(completion: (() -> Void)? = nil) {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "AdUnitID", request: request, completionHandler: { [self] ad, error in
+            guard error == nil else { return }
+            interstitial = ad
+            if let completion = completion {
+              completion
+            }
+        })
+    }
     
     static func showAd() {
         guard interstitial != nil else { return }
