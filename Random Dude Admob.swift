@@ -1,6 +1,6 @@
 //
 //  Insterstitial.swift
-//  Jokes
+//
 //
 //  Created by Jesper Dinger on 23/08/2021.
 //
