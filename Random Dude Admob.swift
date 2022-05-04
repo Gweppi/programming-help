@@ -13,17 +13,16 @@ class InterstitialAd: NSObject, GADFullScreenContentDelegate, ObservableObject {
     
     static func loadAd() {
         let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-7601276826095787/5181551327", request: request, completionHandler: { [self] ad, error in
+        GADInterstitialAd.load(withAdUnitID: "AdUnitID", request: request, completionHandler: { [self] ad, error in
             guard error == nil else { return }
             interstitial = ad
         })
     }
     
     static func showAd() {
-        if !ViewModel.shared.purchases.hideAds {
-            guard interstitial != nil else { return }
-            interstitial?.present(fromRootViewController: (UIApplication.shared.windows.first?.rootViewController!)!)
-        }
+        guard interstitial != nil else { return }
+//      This is how I present the add, an interstitial is a view itself. 
+        interstitial?.present(fromRootViewController: (UIApplication.shared.windows.first?.rootViewController!)!)
     }
     
     private static func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
