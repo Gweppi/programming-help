@@ -16,6 +16,7 @@ class InterstitialAd: NSObject, GADFullScreenContentDelegate, ObservableObject {
         GADInterstitialAd.load(withAdUnitID: "AdUnitID", request: request, completionHandler: { [self] ad, error in
             guard error == nil else { return }
             interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
         })
     }
 
@@ -24,6 +25,7 @@ class InterstitialAd: NSObject, GADFullScreenContentDelegate, ObservableObject {
         GADInterstitialAd.load(withAdUnitID: "AdUnitID", request: request, completionHandler: { [self] ad, error in
             guard error == nil else { return }
             interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
             if let completion = completion {
               completion
             }
