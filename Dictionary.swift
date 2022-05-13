@@ -8,5 +8,3 @@ extension Dictionary where Value: Equatable {
 let dictionary = ["Nepal": "Kathmandu", "Italy": "Rome", "England": "London"]
 
 let key = dictionary.key(forValue: "Rome")
-
-print(key)
