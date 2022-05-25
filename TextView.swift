@@ -5,6 +5,7 @@ struct ContentView: View {
 	
 	var body: some View {
 	TextField("Type here", text: $username)
+	ViewTheText(username: $username)
 	}
 }
 
