@@ -14,6 +14,7 @@ struct HomeView: View {
 		NavigationView {
 			VStack {
 				Text("Home")
+// 				Add new views here...
 			}
 			.navigationTitle("Home")
 		}
