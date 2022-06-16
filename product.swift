@@ -50,9 +50,9 @@ final class ViewModel: ObservableObject {
     @Published private(set) var products: [Product] = []
     @Published private(set) var total = 0.0
     
-    func addProduct(_ prodcut: Product) {
-        products.append(prodcut)
-        total += prodcut.price
+    func addProduct(_ product: Product) {
+        products.append(product)
+        total += product.price
     }
     
     func deleteProduct(_ product: Product) {
